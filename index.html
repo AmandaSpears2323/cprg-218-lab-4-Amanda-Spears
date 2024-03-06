@@ -4,35 +4,101 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
-  <link rel="stylesheet" type="text/css" href="/styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-6.5.1-web/css/all.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-6.5.1-web/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-6.5.1-web/webfonts/fa-solid-900.ttf">
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-6.5.1-web/webfonts/fa-brands-400.ttf">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap">
+  
   <title>Common Website Features</title>
 </head>
 <body>
   <section class="hero-container">
-    <!-- Remove and add hero banner HTML -->
-    <div class="remove-assignment-content">
-      <h1>Hero Banner</h1>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Using Common Website Features Lab 4</h1>
+        <h2>Zoo Animals</h2>
+      </div>
     </div>
   </section>
   <section class="container content-container">
-    <!-- Remove and add content HTML -->
-    <div class="remove-assignment-content">
-      <h1>Content</h1>
+    <div class="content-image">
     </div>
+      <div class="content-text">
+         <h1>Hippo</h1>
+        <p>A Hippo or Hippopotamus is a large mammal who can swim up to 30km/h!</p>
+        <i class="fa-solid fa-hippo fa-2xl"></i>
+      </div>
   </section>
   <section class="container accordion-container">
-    <!-- Remove and add accordion HTML -->
     <div class="remove-assignment-content">
-      <h1>Accordion</h1>
+      <h1>More Zoo Animals</h1>
+      <button class="accordion">Penguin</button>
+      <div class="panel">
+        <p>Penguins are flightless birds that live almost exclusivley in the Southern Hemisphere. Depending on the type of Penguin they can live up to 20 years!</p>
+      </div>
+      <button class="accordion">Gorilla</button>
+      <div class="panel">
+        <p>Gorillas are able to live up to 40 years old and depending on the region the Gorilla comes from they can have a speed of 40km/h!</p>
+      </div>
+      <button class="accordion">Polar Bear</button>
+      <div class="panel">
+        <p>Polar Bears are native to the Artic, they can run up to 40km/h and is the largest species of bear. Adult males weigh from 300-800kg or 660-1700lbs!</p>
+      </div>
     </div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>
   </section>
+  
+  
   <section class="footer-container">
-    <!-- Remove and add footer HTML -->
     <div class="remove-assignment-content">
+    <div class="lobster-regular">
       <h1>Footer</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5016.875395062395!2d-114.03970982229002!3d51.045005400000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717bf9b1dcd9e5%3A0xdab221042c5a569a!2sCalgary%20Zoo!5e0!3m2!1sen!2sca!4v1709750015170!5m2!1sen!2sca"
+      height="250px" width="350px" float="left">
+    </iframe>
+  </div>
+  <div class="footer-text">
+      <footer>
+      <details>
+        <summary>Links</summary> 
+        <p>https://www.w3schools.com/</p>
+        <p>https://unsplash.com/</p>
+        <p>https://www.calgaryzoo.com/</p>
+    </details>
+    <details>
+        <summary>Attributions</summary>
+        <p>All images sourced from Unsplash, code completed by Amanda Spears, and other references used in the links section.</p>
+    </details>
+  </footer>
+</div>
+<footer>
+      <p>© Copyrights <span id="year"></span> by Amanda Spears SAIT Student. All rights reserved.</p>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+  </footer>
+
     </div>
   </section>
 </body>
